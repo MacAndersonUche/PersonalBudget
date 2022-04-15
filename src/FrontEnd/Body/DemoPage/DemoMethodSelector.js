@@ -1,6 +1,6 @@
 import { HStack } from "@chakra-ui/react";
 
-const DemoMethodSelector = (params) => {
+const DemoMethodSelector = () => {
 	return (
 		<div>
 			<Stack spacing={4} direction='row' align='center'>
@@ -18,15 +18,14 @@ const DemoMethodSelector = (params) => {
 				</Button>
 			</Stack>
 			<FormControl>
-                <HStack>
-				<FormLabel htmlFor='email'>Email address</FormLabel>
-				<Input id='email' type='email' />
-                </HStack>
-                <HStack>
-				<FormLabel htmlFor='email'>Email address</FormLabel>
-				<Input id='email' type='email' />
-                </HStack>
-
+				<HStack>
+					<FormLabel htmlFor='email'>Email address</FormLabel>
+					<Input id='email' type='email' />
+				</HStack>
+				<HStack>
+					<FormLabel htmlFor='email'>Email address</FormLabel>
+					<Input id='email' type='email' />
+				</HStack>
 			</FormControl>
 		</div>
 	);

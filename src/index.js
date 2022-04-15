@@ -6,7 +6,8 @@ import App from "./App";
 
 ReactDOM.render(
 	<ChakraProvider>
-		<App />
+	
+			<App />
 	</ChakraProvider>,
 	document.getElementById("root")
 );

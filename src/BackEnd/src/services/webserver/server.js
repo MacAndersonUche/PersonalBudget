@@ -2,9 +2,18 @@ const express = require("express");
 const { expensesEnvelopeMock } = require("../mocks/expenses");
 const { globalExpenseCreator } = require("./globalExpenseCreator");
 const { getIndexById, updateElement } = require("./utils");
+const cors = require("cors");
 
 const app = express();
 const port = 8080;
+
+
+const corsOptions = {
+	origin: "*"
+};
+
+
+app.use(cors(corsOptions));
 
 //Send back the entire expenses
 app.get("/", (req, res) => {
@@ -13,7 +22,8 @@ app.get("/", (req, res) => {
 
 //Send back the entire expenses
 app.get("/expenses", (req, res) => {
-	res.status(200).send({ data: expensesEnvelopeMock });
+	
+	res.status(200).json({ data: expensesEnvelopeMock });
 	res.status(400).send("Bad Request");
 });
 
