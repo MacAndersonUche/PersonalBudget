@@ -2,12 +2,14 @@
 
 import { Container } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DemoGet from "./FrontEnd/Body/DemoPage/DemoGet";
 import DemoPage from "./FrontEnd/Body/DemoPage/DemoPage";
 import EnvelopePage from "./FrontEnd/Body/EnvelopesPage/EnvelopePage";
 import HomePage from "./FrontEnd/Body/HomePage/HomePage";
+import PostDemo from "./FrontEnd/Body/DemoPage/PostDemo";
 
 import Navabar from "./FrontEnd/Navigation/Navbar";
+import PutDemo from "./FrontEnd/Body/DemoPage/PutDemo";
+import DeleteDemo from "./FrontEnd/Body/DemoPage/DeleteDemo";
 
 function App() {
 	return (
@@ -18,7 +20,9 @@ function App() {
 				<Route exact path='/' element={<HomePage />} />
 				<Route exact path='/demo' element={<DemoPage />} />
 				<Route exact path='/envelope' element={<EnvelopePage />} />
-				<Route exact path='/demo/get' element={<DemoGet />} />
+				<Route exact path="/demo/postDemo" element= {<PostDemo/>}/>
+				<Route exact path="/demo/putDemo" element={<PutDemo/>} />
+				<Route exact path="/demo/deleteDemo" element={<DeleteDemo/>}/>
 			</Routes>
 
 			</Container>

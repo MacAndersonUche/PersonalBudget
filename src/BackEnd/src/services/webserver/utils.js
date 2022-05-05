@@ -14,7 +14,7 @@ const createElement = (queryArguments, originalArray) => {
 		return {
 			category: queryArguments.category,
 			uniqueID: lastObj.uniqueID + 1,
-			expenseBudget: queryArguments.expenseBudget,
+			expenseBudget: Number(queryArguments.expenseBudget),
 		};
 	} else {
 		return false;
@@ -22,7 +22,7 @@ const createElement = (queryArguments, originalArray) => {
 };
 
 const updateElement = (id, queryArguments, elementList) => {
-	const elementIndex = getIndexById(id, elementList);
+	const elementIndex = getIndexById(Number(id), elementList);
 	if (elementIndex === -1) {
 	  throw new Error('updateElement must be called with a valid id parameter');
 	}

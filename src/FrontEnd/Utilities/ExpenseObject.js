@@ -1,4 +1,4 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 
 const ExpenseObject = ({ expenseData }) => {
 	return (

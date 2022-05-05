@@ -15,16 +15,12 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-//Send back the entire expenses
-app.get("/", (req, res) => {
-	res.send("Hello World");
-});
 
 //Send back the entire expenses
 app.get("/expenses", (req, res) => {
 	
 	res.status(200).json({ data: expensesEnvelopeMock });
-	res.status(400).send("Bad Request");
+	// res.status(400).send("Bad Request");
 });
 
 //Filtering the expenses array
@@ -50,7 +46,7 @@ app.delete("/expenses/:id", (req, res) => {
 	console.log(indexToDelete);
 	if (indexToDelete !== -1) {
 		expensesEnvelopeMock.splice(indexToDelete, 1);
-		res.status(204).send(expensesEnvelopeMock);
+		res.send({data: expensesEnvelopeMock});
 	} else {
 		res.status(404).send("Id  not found");
 	}
@@ -61,7 +57,7 @@ app.put("/expenses/:id", (req, res) => {
 	const indexToDelete = getIndexById(req.params.id, expensesEnvelopeMock);
 	if (indexToDelete !== -1) {
 		updateElement(req.params.id, req.query, expensesEnvelopeMock);
-		res.send(expensesEnvelopeMock);
+		res.send({data: expensesEnvelopeMock});
 	} else {
 		globalExpenseCreator(req, res);
 	}
