@@ -1,3 +1,4 @@
+const serverless = require('serverless-http');
 const express = require("express");
 const { expensesEnvelopeMock } = require("../mocks/expenses");
 const { globalExpenseCreator } = require("./globalExpenseCreator");
@@ -88,3 +89,6 @@ app.post("/expenses/transfer/:from/:to", (req, res) => {
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
+
+
+module.exports.handler = serverless(app);

@@ -8,7 +8,7 @@ const OtherDemoMethods = () => {
 
 	async function getData() {
 		try {
-			const response = await fetch("http://localhost:8080/expenses");
+			const response = await fetch("http://localhost:3000/expenses");
 
 			if (response.ok) {
 				const data = await response.json();
