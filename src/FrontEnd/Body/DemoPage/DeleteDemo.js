@@ -32,7 +32,7 @@ const DeleteDemo = () => {
 
 			if (response.ok) {
 				const data = await response.json();
-				console.log(data);
+				// console.log(data);
 				setExpense(data);
 				setShow(true);
 				return data;
