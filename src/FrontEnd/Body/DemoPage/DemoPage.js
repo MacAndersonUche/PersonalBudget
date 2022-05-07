@@ -1,15 +1,11 @@
-import { Container, Text } from "@chakra-ui/react";
+import { Container, Heading } from "@chakra-ui/react";
+import HeadingTitle from "../../Utilities/HeadingTitle";
 import OtherDemoMethods from "./OtherDemo";
 
 const DemoPage = () => {
 	return (
-		<Container
-			maxW='100%'
-			h='100vh'
-			centerContent
-			fontSize={{ base: "16px", md: "30px", lg: "36px" }}
-		>
-			<Text>Welcome to the Demo. Choose your request type</Text>
+		<Container maxW='100%' h='100vh' centerContent>
+			<HeadingTitle/>
 
 			<OtherDemoMethods />
 		</Container>

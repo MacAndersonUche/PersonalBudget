@@ -1,4 +1,5 @@
-import { Container, Text } from "@chakra-ui/react";
+import { Container, Heading } from "@chakra-ui/react";
+import HeadingTitle from "../../Utilities/HeadingTitle";
 import ButtonSelector from "./ButtonSelector";
 
 const HomePage = () => {
@@ -7,9 +8,8 @@ const HomePage = () => {
 			maxW='100%'
 			h='100vh'
 			centerContent
-			fontSize={{ base: "16px", md: "30px", lg: "36px" }}
 		>
-			<Text>Welcome to Macs Budget Planner. Choose your action</Text>
+			<HeadingTitle/>
 			<ButtonSelector path1="/demo" title1="Create Demo"
             path2="/envelope" title2="Create Envelope"/>
 		</Container>

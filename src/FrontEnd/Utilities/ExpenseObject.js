@@ -1,19 +1,31 @@
-import { HStack } from "@chakra-ui/react";
+import {  Box, Flex, Spacer } from "@chakra-ui/react";
 
 const ExpenseObject = ({ expenseData }) => {
 	return (
-		<HStack fontSize={{ base: "16px", md: "30px", lg: "35px" }} spacing="10">
+		<Flex
+			fontSize={{base:"10px",sm: "12px", md: "20px", lg: "25px" }}
+			alignItems='center'
+			flexWrap='wrap'
+			justifyContent="center"
+		>
 			{expenseData.data &&
 				expenseData.data.map((item) => {
 					return (
-						<div key={item.uniqueID}>
-							<h3>Title: {item.category}</h3>
-							<p>Expense Id: {item.uniqueID}</p>
-							<p>Cost: £{item.expenseBudget}</p>
-						</div>
+						<Box>
+							<Box
+								key={item.uniqueID}
+								w={{base:"80px", sm: "150px", md: "220px", lg: "250px" }}
+								p={{base:"10px", sm: "30px", md: "35px", lg: "40px" }}
+							>
+								<h3> <strong>Name: </strong>{item.category}</h3>
+								<p><strong>UniqueID:</strong> {item.uniqueID}</p>
+								<p><strong>Cost: £</strong>{item.expenseBudget}</p>
+							</Box>
+							<Spacer />
+						</Box>
 					);
 				})}
-		</HStack>
+		</Flex>
 	);
 };
 

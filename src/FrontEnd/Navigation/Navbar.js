@@ -11,7 +11,7 @@ const Navabar = () => {
 		<Breadcrumb
 			spacing='8px'
 			separator={<BreadcrumbSeparator />}
-			fontSize={{ base: "15px", md: "15px", lg: "20px" }}
+			fontSize={{ base: "12px", sm: "20px", md: "25px", lg: "30px" }}
 			
 		>
 			<BreadcrumbItem>

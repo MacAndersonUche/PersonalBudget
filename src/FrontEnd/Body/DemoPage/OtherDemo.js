@@ -34,35 +34,35 @@ const OtherDemoMethods = () => {
 			maxW='100%'
 			h='100vh'
 			centerContent
-			fontSize={{ base: "16px", md: "30px", lg: "36px" }}
+			// fontSize={{ base: "16px", md: "30px", lg: "36px" }}
 		>
 			<HStack>
-				<Button
+				<Button 
+					size="sm"
 					colorScheme='teal'
-					size='md'
 					variant='solid'
 					onClick={handleClick}
 				>
 					Get
 				</Button>
-				<Button
+				<Button 
+					size="sm"
 					colorScheme='teal'
-					size='md'
 					variant='solid'
 				>
 					<Link as={ReachLink} to="/demo/postDemo">POST</Link>
 				</Button>
-				<Button
+				<Button 
+					size="sm"
 					colorScheme='teal'
-					size='md'
 					variant='solid'
 					onClick={handleClick}
 				>
 					<Link as={ReachLink} to="/demo/putDemo">PUT</Link>
 				</Button>
-				<Button
+				<Button 
+					size="sm"
 					colorScheme='teal'
-					size='md'
 					variant='solid'
 					onClick={handleClick}
 				>
