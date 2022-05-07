@@ -11,7 +11,7 @@ const ExpenseObject = ({ expenseData }) => {
 			{expenseData.data &&
 				expenseData.data.map((item) => {
 					return (
-						<Box>
+						<Box key={item.uniqueID}>
 							<Box
 								key={item.uniqueID}
 								w={{base:"80px", sm: "150px", md: "220px", lg: "250px" }}
