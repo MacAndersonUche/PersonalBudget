@@ -1,12 +1,12 @@
-const serverless = require('serverless-http');
+
 const express = require("express");
-const { expensesEnvelopeMock } = require("../mocks/expenses");
-const { globalExpenseCreator } = require("./globalExpenseCreator");
-const { getIndexById, updateElement } = require("./utils");
+const { expensesEnvelopeMock } = require("./src/BackEnd/src/services/mocks/expenses");
+const { globalExpenseCreator } = require("./src/BackEnd/src/services/webserver/globalExpenseCreator");
+const { getIndexById, updateElement } = require("./src/BackEnd/src/services/webserver/utils");
 const cors = require("cors");
 
 const app = express();
-const port = 8080;
+// const port = 8080;
 
 
 const corsOptions = {

@@ -37,7 +37,7 @@ const PutDemo = () => {
 
 	async function getData() {
 		try {
-			const response = await fetch(`http://localhost:8080/expenses/${expenseState.uniqueID}?category=${expenseState.category}&expenseBudget=${expenseState.expenseBudget}`, {
+			const response = await fetch(`https://wqwqz9vy34.execute-api.us-east-1.amazonaws.com/latest/expenses/${expenseState.uniqueID}?category=${expenseState.category}&expenseBudget=${expenseState.expenseBudget}`, {
                 method: "PUT"
             });
 

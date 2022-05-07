@@ -8,7 +8,7 @@ const OtherDemoMethods = () => {
 
 	async function getData() {
 		try {
-			const response = await fetch("http://localhost:3000/expenses");
+			const response = await fetch("https://wqwqz9vy34.execute-api.us-east-1.amazonaws.com/latest/expenses");
 
 			if (response.ok) {
 				const data = await response.json();

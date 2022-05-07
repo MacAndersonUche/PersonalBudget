@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
+    "aws-serverless-express": "^3.4.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "framer-motion": "^4.1.17",
