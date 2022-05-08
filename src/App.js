@@ -10,9 +10,18 @@ import PostDemo from "./FrontEnd/Body/DemoPage/PostDemo";
 import Navabar from "./FrontEnd/Navigation/Navbar";
 import PutDemo from "./FrontEnd/Body/DemoPage/PutDemo";
 import DeleteDemo from "./FrontEnd/Body/DemoPage/DeleteDemo";
+import {Amplify} from "aws-amplify"
+import awsconfig from "./aws-exports"
+import {AmplifySignOut, AmplifyAuthenticator} from "@aws-amplify/ui-react"
+
+
+Amplify.configure(awsconfig)
 
 function App() {
 	return (
+		<AmplifyAuthenticator>
+			
+			<AmplifySignOut/>
 		<Router>
 			<Container maxW='100%' bg='blue.400' h='100vh'>
 			<Navabar />
@@ -27,7 +36,8 @@ function App() {
 
 			</Container>
 		</Router>
+		</AmplifyAuthenticator>
 	);
 }
 
-export default App;
+export default  App ;
